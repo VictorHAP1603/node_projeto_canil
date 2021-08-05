@@ -13,6 +13,6 @@ routes.get("/fishes", PageController.fishes);
 routes.get("/search", SearchController.search);
 
 // Se não achar a página
-routes.use((req, res) => res.send("Página não encontrada"));
+routes.use((req, res) => res.render("pages/404"));
 
 export default routes;
