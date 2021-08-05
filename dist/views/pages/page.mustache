@@ -1,0 +1,20 @@
+{{>partials/header}}
+
+{{#informations}}
+    <section class="banner" style="background-image: url('/images/{{ informations.background }}')">{{ informations.title }}</section>
+    <h2>{{ informations.subtitle }}</h2>
+{{/informations}}
+
+<div class="container list">
+    {{#pets}}
+        {{>partials/itemCard}}
+    {{/pets}}
+
+    {{^pets}}
+        <h2 class="not_found" >Não há animais disponíveis nesta condição</h2>
+    {{/pets}}
+</div>
+ 
+ 
+{{>partials/footer}}
+
