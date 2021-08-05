@@ -8,6 +8,10 @@ export default {
   search: (req: Request, res: Response) => {
     const { q } = req.query;
 
+    if (!q) {
+      return res.redirect("/");
+    }
+
     const pets = Pet.getByName(String(q));
 
     return res.render("pages/page", {
